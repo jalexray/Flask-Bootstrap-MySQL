@@ -69,12 +69,6 @@ update_env_file() {
 		touch "$ENV_FILE"
 	fi
 
-	# Append or update values in .env file
-	echo "Updating .env file..."
-	sed -i "/^DATABASE_NAME=/d" "$ENV_FILE"
-	sed -i "/^DATABASE_USER=/d" "$ENV_FILE"
-	sed -i "/^DATABASE_PASSWORD=/d" "$ENV_FILE"
-
 	echo "DATABASE_NAME=\"$DB_NAME\"" >> "$ENV_FILE"
 	echo "DATABASE_USER=\"$USER_NAME\"" >> "$ENV_FILE"
 	echo "DATABASE_PASSWORD=\"$DB_PASS\"" >> "$ENV_FILE"
