@@ -80,4 +80,4 @@ update_env_file() {
 echo "🔍 Checking MySQL status..."
 get_user_input
 create_mysql_db
-update_env_file()
+update_env_file
